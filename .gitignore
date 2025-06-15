@@ -1,0 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.venv/
+pip-wheel-metadata/
+build/
+dist/
+
+# Editor settings
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln
+*.dbmdl
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ChromaDB persistence dir
+.chromadb/
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+*~
+
+# Docker compose override (if you create one locally)
+docker-compose.override.yml
+
+# Milvus data volume (if using local volume)
+volumes/milvus/
+
+# macOS Finder files
+.AppleDouble
+.LSOverride
+
+# Python coverage
+.coverage
+htmlcov/
+coverage.xml
+
+# mypy
+.mypy_cache/
+
+# Pytest
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Ignore credentials
+.env

@@ -1,0 +1,54 @@
+# # Temporal & async support
+# temporalio[async]
+
+# # Document parsing
+# unstructured
+
+
+# # Google Gemini embeddings
+# google-genai
+
+# # Vector DB client
+# pymilvus
+
+# # Async HTTP fetching
+# aiohttp
+
+# # Retry helpers for transient errors
+# tenacity
+
+# cohere
+
+
+# Core
+temporalio[async]
+
+# HTTP fetching
+aiohttp
+
+# PDF parsing
+pypdf
+pdfminer.six
+
+# Word documents
+python-docx
+textract
+
+# Spreadsheets
+pandas
+openpyxl
+xlrd
+
+# Embeddings
+cohere
+
+# Retry helpers
+tenacity
+
+# Vector DB client
+# pymilvus
+
+# File‑type detection
+python-magic
+
+chromadb
