@@ -1,25 +1,3 @@
-# # Temporal & async support
-# temporalio[async]
-
-# # Document parsing
-# unstructured
-
-
-# # Google Gemini embeddings
-# google-genai
-
-# # Vector DB client
-# pymilvus
-
-# # Async HTTP fetching
-# aiohttp
-
-# # Retry helpers for transient errors
-# tenacity
-
-# cohere
-
-
 # Core
 temporalio[async]
 
@@ -46,9 +24,9 @@ cohere
 tenacity
 
 # Vector DB client
-# pymilvus
+chromadb
 
 # File‑type detection
 python-magic
 
-chromadb
+
