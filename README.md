@@ -34,10 +34,10 @@ It uses:
 
 ```
 ## Steps to Run
-- run **docker-compose up --build -d**   
-- open worker logs with **docker-compose logs -f worker**
-- In another terminal run **docker-compose exec worker bash** to start a bash terminal inside the worker
-- Run a input in following format **python src/run_ingest.py --file-id example123 --file-url https://example.com/mydoc.pdf**
+- run `docker-compose up --build -d`   
+- open worker logs with `docker-compose logs -f worker`
+- In another terminal run `docker-compose exec worker bash` to start a bash terminal inside the worker
+- Run a input in following format `python src/run_ingest.py --file-id example123 --file-url https://example.com/mydoc.pdf`
 - Monitor the worker logs to see the step by step execution of workflow.
 
 
