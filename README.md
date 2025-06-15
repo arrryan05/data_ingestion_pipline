@@ -70,4 +70,22 @@ It uses:
 By organizing around Temporal’s Workflow/Activity paradigm, layering in asyncio I/O concurrency, and carefully classifying errors, this pipeline is both resilient and  scalable.
 
 
+### Terminal Screenshots
+- **Fetching**
+  ![image](https://github.com/user-attachments/assets/02c2c0c3-73b3-4de1-bd82-ba969085a1a8)
+- **Parsing**
+  ![image](https://github.com/user-attachments/assets/b87f8b49-9ce0-4ff6-b696-358f7ee84af6)
+- **Chunking**
+  ![image](https://github.com/user-attachments/assets/88ec02de-c9c5-4abb-a3fd-2c2dbef9f6e6)
+- **Embedding**
+  ![image](https://github.com/user-attachments/assets/c0b7a38c-7598-4dc2-83c1-69ac1f5a0025)
+- **Storing to VectorDB**
+  ![image](https://github.com/user-attachments/assets/c6e35ba3-0dcb-46c7-81fd-836a311e8aa8)
+
+
+
+
+
+
+
 
