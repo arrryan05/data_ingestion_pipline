@@ -19,17 +19,17 @@ It uses:
 ## Architecture
 
 ```text
-┌───────────────┐       ┌─────────────┐     ┌─────────────┐
-│  trigger CLI  ├─►│ Temporal Frontend ├─► ─┤  Workflow   │
-└───────────────┘       └─────────────┘     │ Activities  │
-                                            └─────────────┘
-    |                                              │     ├─ fetch_document
-    ▼                                              │     ├─ parse_document
-(workflow run)                                     │     ├─ generate_embedding
-    │                                              │     └─ store_chunk
-    ▼                                              ▼
+┌───────────────┐       ┌─────────────┐          ┌─────────────┐
+│  trigger CLI  ├─►│ Temporal Ingestion workflow├─► ─┤  Workflow      │
+└───────────────┘       └─────────────┘          │ Activities     │
+                                                       └─────────────┘
+    |                                                      │     ├─ fetch_document
+    ▼                                                     │     ├─ parse_document
+(workflow run)                                             │     ├─ generate_embedding
+    │                                                      │     └─ store_chunk
+    ▼                                                     ▼
 ┌───────────────┐    ┌──────────────┐    ┌─────────────────┐
-│ Cohere Embed  │    │ ChromaDB     │    │ Local Temp Files│
+│ Cohere Embed  │    >  │ ChromaDB       │ >  │ Local Temp Files.  │
 └───────────────┘    └──────────────┘    └─────────────────┘
 
 ```
