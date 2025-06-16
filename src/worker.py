@@ -4,8 +4,8 @@ import logging
 from temporalio.client import Client
 from temporalio.worker import Worker
 
-from chromadb import Client as ChromaClient
-from chromadb.config import Settings
+from chroma_client import init_chroma
+
 
 from workflows.ingest_workflow import IngestWorkflow
 from activities.activities import (
@@ -17,12 +17,10 @@ from activities.activities import (
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
-chroma_client = ChromaClient(Settings(
-    persist_directory=".chromadb"
-))
-if "documents" not in chroma_client.list_collections():
-    chroma_client.get_or_create_collection(name="documents")
-logging.info("✅ ChromaDB collection 'documents' ready")
+# Initialize ChromaDB before starting the worker
+chroma_client = init_chroma(persist_dir=".chromadb", collection_name="documents")
+logging.info("✅ ChromaDB ready — will be used inside activities")
+
 
 async def main():
     # 1) Connect to Temporal

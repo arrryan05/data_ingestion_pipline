@@ -39,6 +39,9 @@ docker-compose.override.yml
 # Milvus data volume (if using local volume)
 volumes/milvus/
 
+# Local Docker volumes
+volumes/
+
 # macOS Finder files
 .AppleDouble
 .LSOverride

@@ -14,7 +14,7 @@ def _suffix_from_url(url: str) -> str:
 @activity.defn
 async def fetch_document(file_url: str) -> bytes:
     # Deferred import
-    import aiohttp
+    import aiohttp  
 
     timeout = aiohttp.ClientTimeout(total=300)
     async with aiohttp.ClientSession(timeout=timeout) as session:
@@ -138,9 +138,11 @@ async def store_chunk(record: Dict[str, Any]) -> None:
     """
     Storing the chunk into the in‐process ChromaDB 'documents' collection.
     """
-    from worker import chroma_client  
+    from chroma_client import get_chroma_client  
+    
+    client = get_chroma_client()
 
-    coll = chroma_client.get_collection("documents")
+    coll = client.get_collection("documents")
     chunk_id = f"{record['file_id']}::{record['chunk_index']}"
     coll.add(
         ids=[chunk_id],

@@ -3,6 +3,8 @@ import asyncio
 from temporalio.client import Client
 from workflows.ingest_workflow import IngestWorkflow
 
+
+#python src/run_ingest.py --file-id test789 --file-url https://www.alberta.ca/system/files/atia-fact-sheet-concordance-table.pdf
 async def main():
     parser = argparse.ArgumentParser(description="Trigger IngestWorkflow")
     parser.add_argument("--file-id",  required=True, help="Unique File ID")
